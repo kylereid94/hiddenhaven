@@ -149,7 +149,7 @@
         <h1 class="text-4xl font-['quasimoda-2'] font-[900] mb-4">Support The Project</h1>
         <div class="carousel carousel-center h-3/4 space-x-6 p-4" id="product-car">
             <div class="carousel-item w-1/6">
-                <div class="card w-full bg-white rounded-none border border-2 border-primary flex flex-col transition-transform hover:scale-105 hover:shadow-md">
+                <div class="card w-full bg-white rounded-none border border-2 border-primary flex flex-col transition-transform hover:scale-105 hover:shadow-md" onclick="mothman-shirt.showModal()">
                     <figure>
                         <img src="/assets/mothman-tshirt.png" class="">
                     </figure>
@@ -160,6 +160,17 @@
                     <button class="btn btn-sm btn-primary rounded-none text-white">Buy Now</button>
                 </div>
             </div>
+            <dialog id="mothman-shirt" class="modal">
+                <div class="modal-box grid grid-col-2 grid-rows-3">
+                    <img src="/assets/mothman-tshirt.png" class="flex">
+                    <h1>"Save Mothman" T-shirt</h1>
+                    <h2>$20</h2>
+                    <p>Show your support for protecting the majestic half man, half moth legend.</p>
+                </div>
+                <form method="dialog" class="modal-backdrop">
+                  <button>close</button>
+                </form>
+              </dialog>
             <div class="carousel-item w-1/6">
                 <div class="card w-full bg-white rounded-none border border-2 border-primary flex flex-col transition-transform hover:scale-105 hover:shadow-md">
                     <figure>
