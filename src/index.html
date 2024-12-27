@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/nbz8aok.css">
+  <style>
+    #hero {
+        position: relative;
+    }
+    #hero::before {
+        content: "";
+        position: absolute;
+        background-color: rgb(0,0,0,.2);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    #top-nav, #hero-content {
+        z-index: 2;
+    }
+
+    #products {
+        position: relative;
+    }
+
+    #products::before {
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        background: linear-gradient(to right, rgba(256, 256, 256, 0), rgba(256, 256, 256, 1) 80%);
+    }
+
+    #adopt {
+        position: relative;
+    }
+    #adopt::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(22, 25, 54, 0.6);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        left: 0;
+        top: 0;
+    }
+
+    #adopt-grid {
+        z-index: 2;
+        position: relative;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="hero h-screen flex flex-col px-20" style="background-image:url(/assets/hero-2.png)" id="hero">
+        <div class="navbar backdrop-blur-md flex-none mt-6 rounded-full border border-2 border-[#718355]" id="top-nav">
+            <div class="btn btn-ghost flex-none">
+                <img src="/assets/logo.svg" class="w-8 flex">
+                <h1 class="text-white text-xl flex font-['quasimoda-2'] pt-1">Hidden Haven Project</h1>
+            </div>
+            <div class="flex flex-grow justify-end" id="nav-menu">
+                <ul class="menu menu-horizontal text-white font-['Quasimoda'] font-[700] gap-4 text-md uppercase">
+                    <li><a class="hover:bg-primary rounded-full pt-3">Home</a></li>
+                    <li><a class="hover:bg-primary rounded-full pt-3">About Us</a></li>
+                    <li><a class="hover:bg-primary rounded-full pt-3">Volunteer</a></li>
+                    <li><a class="hover:bg-primary rounded-full pt-3">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex flex-row flex-grow w-full" id="hero-content">
+            <div class="h-full flex flex-col justify-center gap-4 w-1/2" id="title">
+                <h1 class="text-white text-8xl font-['quasimoda-2']  font-[900]">Saving<br>Our Mythical<br>Neighbors</h1>
+                <h2 class="text-white text-2xl font-['quasimoda']">One Forest At A Time</h2>
+            </div>
+            <div class="flex items-center justify-end w-1/2">
+                <div class="grid grid-rows-3 grid-cols-3 h-[500px] w-[500px]" id="hero-smallgrid">
+                    <div class="row-start-1 col-start-1 text-white font-['quasimoda'] font-[700] text-md flex justify-center items-center px-4"><h1 class="flex">Rebuilding the Legends</h1></div>
+                    <div class="bg-cover bg-center border border-2 border-r-0 border-primary row-start-2 col-start-1" style="background-image: url(/assets/pointpleasant.png);"></div>
+                    <div class="col-start-1 row-start-3"></div>
+                    <div class="bg-cover bg-center border border-2 border-r-0 border-b-0 border-primary col-start-2 row-start-1" style="background-image: url(/assets/lochness.png);"></div>
+                    <div class=" bg-primary col-start-2 row-start-2 text-white font-['quasimoda'] font-[700] text-md flex justify-center items-center px-4"><h1>Conserving the Truth</h1></div>
+                    <div class="col-start-2 row-start-3"></div>
+                    <div class=" bg-primary col-start-3 row-start-1 text-white font-['quasimoda'] font-[700] text-md flex justify-center items-center px-4"><h1>Protecting and Maintaining all Habitats</h1></div>
+                    <div class="backdrop-blur-md border border-0 border-r-2 border-primary col-start-3 row-start-2"></div>
+                    <div class="bg-cover bg-center border border-2 border-primary col-start-3 row-start-3" style="background-image: url(/assets/sthelen.png);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col h-screen">
+        <div class="bg-primary flex flex-none flex-row justify-center py-8 px-24 justify-between text-[#bbbcbd]" id="sponsors">
+            <div class="flex flex-col items-center" id="spons1">
+                <h1 class="font-['quasimoda'] font-[700] uppercase text-2xl">Enigma Energy</h1>
+                <h2 class="text-sm font-['quasimoda'] font-[400] uppercase">Empowering the Mysterious</h2>
+            </div>
+            <div class="" id="spons2">
+                <img src="/assets/tent.svg" class="w-12">
+            </div>
+            <div class="flex flex-row items-center gap-2" id="spons3">
+                <img src="/assets/camp.svg" class="w-12 flex">
+                <div class="flex">
+                    <h1 class="text-lg font-['quasimoda'] font-[700] leading-[.8] pt-1">Arcane Adventures<br><span class=" text-sm font-['quasimoda'] font-[400]">Outdoor Gear</span></h1>
+                </div>
+            </div>
+            <div class="flex flex-row items-center gap-2" id="spons4">
+                <img src="/assets/target.svg" class="w-8">
+                <h1 class="text-lg font-['quasimoda'] font-[700] leading-[.9] pt-1">Hidden Realms<br>Foundation</h1>
+            </div>
+        </div>
+        <div class="bg-secondary px-24 flex flex-grow flex-row items-center" id="project-intro">
+            <div class="flex flex-col w-1/2">
+                <h1 class="text-5xl font-['quasimoda-2'] font-[900]">Preserving the Unknown</h1>
+                <h2 class="text-3xl font-['quasimoda'] mb-6">Protecting Cryptid Habitats</h2>
+                <p>
+                    The Hidden Haven Project works tirelessly to safeguard the delicate habitats of cryptids, the elusive creatures whose existence fuels our sense of wonder and mystery. These habitats, ranging from dense forests to remote mountain ranges and deep lakes, face growing threats from deforestation, urban expansion, climate change, and pollution.</p>
+                    <p><br>Such disruptions not only endanger the cryptids themselves but also the ecosystems they call home, potentially leading to the loss of undiscovered species and invaluable biodiversity. By advocating for responsible land management, conducting research into cryptid lore and sightings, and fostering community engagement, the Coalition strives to protect these legendary habitats for future generations to explore and imagine.</p>
+            </div>
+            <div class="flex items-center justify-end w-1/2">
+                <div class="grid grid-rows-3 grid-cols-3 h-[500px] w-[500px]" id="hero-smallgrid">
+                    <div class="row-start-1 col-start-1 text-primary font-['quasimoda'] font-[700] text-md flex justify-start items-center"><h1 class="flex">What We've Done</h1></div>
+                    <div class="bg-primary border border-2 border-primary row-start-2 col-start-1 text-white font-['quasimoda'] font-[700] text-lg flex justify-center items-center"><h1 class="text-center">Acres<br>Saved</h1></div>
+                    <div class="bg-cover bg-center border border-2 border-t-0 border-primary col-start-1 row-start-3" style="background-image: url(/assets/lochness.png);"></div>
+                    <div class="bg-primary border border-2 border-b-0 border-r-0 border-primary row-start-1 col-start-2 text-white font-['quasimoda'] font-[700] text-lg flex justify-center items-center"><h1 class="text-center">Community<br>Partners</h1></div>
+                    <div class="border border-2 border-t-0 border-l-0 border-primary col-start-2 row-start-2 text-accent font-['quasimoda'] font-[700] text-5xl flex justify-center items-center px-4"><h1>10K</h1></div>
+                    <div class="col-start-2 row-start-3"></div>
+                    <div class="border border-2 border-l-0 border-primary col-start-3 row-start-1 text-accent font-['quasimoda'] font-[700] text-5xl flex justify-center items-center px-4"><h1>50+</h1></div>
+                    <div class="bg-cover bg-center border border-2 border-l-0 border-t-0 border-primary col-start-3 row-start-2" style="background-image: url(/assets/sthelen.png);"></div>
+                    <div class="col-start-3 row-start-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h-[60vh] border border-2 border-primary flex flex-col justify-center pl-24" id="products">
+        <h1 class="text-4xl font-['quasimoda-2'] font-[900] mb-4">Support The Project</h1>
+        <div class="carousel carousel-center h-3/4 space-x-6 p-4" id="product-car">
+            <div class="carousel-item w-1/6">
+                <div class="card w-full bg-white rounded-none border border-2 border-primary flex flex-col">
+                    <figure>
+                        <img src="/assets/mothman-tshirt.png" class="">
+                    </figure>
+                    <div class="flex flex-row justify-between px-6 flex flex-grow items-center">
+                        <h3 class="flex font-['quasimoda']">Save Mothman T-Shirt</h3>
+                        <h1 class="flex font-['quasimoda'] font-[700] text-xl">$20</h1>
+                    </div>
+                    <button class="btn btn-sm btn-primary rounded-none text-white">Buy Now</button>
+                </div>
+            </div>
+            <div class="carousel-item w-1/6">
+                <div class="card w-full bg-white rounded-none border border-2 border-primary flex flex-col">
+                    <figure>
+                        <img src="/assets/yeti-mug.png" class="">
+                    </figure>
+                    <div class="flex flex-row justify-between px-6 flex flex-grow items-center">
+                        <h3 class="flex font-['quasimoda']">Yeti Mug</h3>
+                        <h1 class="flex font-['quasimoda'] font-[700] text-xl">$10</h1>
+                    </div>
+                    <button class="btn btn-sm btn-primary rounded-none text-white">Buy Now</button>
+                </div>
+            </div>
+            <div class="carousel-item w-1/6">
+                <div class="card w-full bg-white rounded-none border border-2 border-primary flex flex-col">
+                    <figure>
+                        <img src="/assets/mothman-pin.png" class="">
+                    </figure>
+                    <div class="flex flex-row justify-between px-6 flex flex-grow items-center">
+                        <h3 class="flex font-['quasimoda']">Mothman Enamel Pin</h3>
+                        <h1 class="flex font-['quasimoda'] font-[700] text-xl">$6</h1>
+                    </div>
+                    <button class="btn btn-sm btn-primary rounded-none text-white">Buy Now</button>
+                </div>
+            </div>
+            <div class="carousel-item w-1/6">
+                <div class="card w-full bg-white rounded-none border border-2 border-primary flex flex-col">
+                    <figure>
+                        <img src="/assets/bigfoot-pin.png" class="">
+                    </figure>
+                    <div class="flex flex-row justify-between px-6 flex flex-grow items-center">
+                        <h3 class="flex font-['quasimoda']">Bigfoot Enamel Pin</h3>
+                        <h1 class="flex font-['quasimoda'] font-[700] text-xl">$6</h1>
+                    </div>
+                    <button class="btn btn-sm btn-primary rounded-none text-white">Buy Now</button>
+                </div>
+            </div>
+            <div class="carousel-item w-1/6">
+                <div class="card w-full bg-white rounded-none border border-2 border-primary flex flex-col">
+                    <figure>
+                        <img src="/assets/jersey-devil-tshirt.png" class="">
+                    </figure>
+                    <div class="flex flex-row justify-between px-6 flex flex-grow items-center">
+                        <h3 class="flex font-['quasimoda']">My Neighbor is the Jersey Devil T-shirt</h3>
+                        <h1 class="flex font-['quasimoda'] font-[700] text-xl">$20</h1>
+                    </div>
+                    <button class="btn btn-sm btn-primary rounded-none text-white">Buy Now</button>
+                </div>
+            </div>
+            <div class="carousel-item w-1/6">
+                <div class="card w-full bg-white rounded-none border border-2 border-primary flex flex-col">
+                    <figure>
+                        <img src="/assets/cryptids-tote.png" class="">
+                    </figure>
+                    <div class="flex flex-row justify-between px-6 flex flex-grow items-center">
+                        <h3 class="flex font-['quasimoda']">Cryptids Tote Bag</h3>
+                        <h1 class="flex font-['quasimoda'] font-[700] text-xl">$15</h1>
+                    </div>
+                    <button class="btn btn-sm btn-primary rounded-none text-white">Buy Now</button>
+                </div>
+            </div>
+            <div class="carousel-item w-1/6">
+                <div class="card w-full bg-white rounded-none border border-2 border-primary flex flex-col">
+                    <figure>
+                        <img src="/assets/mothman-tshirt.png" class="">
+                    </figure>
+                    <div class="flex flex-row justify-between px-6 flex flex-grow items-center">
+                        <h3 class="flex font-['quasimoda']">Save Mothman T-Shirt</h3>
+                        <h1 class="flex font-['quasimoda'] font-[700] text-xl">$20</h1>
+                    </div>
+                    <button class="btn btn-sm btn-primary rounded-none text-white">Buy Now</button>
+                </div>
+            </div>
+          </div>
+    </div>
+    <div class="bg-cover bg-center h-[80vh] px-20 flex items-center" style="background-image:url(/assets/hero-2.png)" id="adopt">
+        <div class="grid grid-cols-4 grid-rows-2 h-3/5 w-full flex" id="adopt-grid">
+            <div class="row-start-1 col-start-1 text-white font-['quasimoda'] font-[700] text-4xl flex justify-start items-center"><h1 class="flex">Join our Community</h1></div>
+            <div class="bg-cover bg-center border border-2 border-r-0 border-primary col-start-1 row-start-2" style="background-image: url(/assets/lochness.png);"></div>
+            <div class="bg-cover bg-center border border-2 border-b-0 border-r-0 border-primary col-start-2 row-start-1" style="background-image: url(/assets/sthelen.png);"></div>
+            <div class="bg-primary border border-2 border-primary row-start-2 col-start-2 text-white font-['quasimoda'] font-[700] text-lg flex justify-center items-center"><h1 class="text-center">Our community works tirelessly to make an impact</h1></div>
+            <div class="backdrop-blur-md border border-2 border-primary row-start-1 col-start-3 flex justify-center items-center"></div>
+            <div class="bg-cover bg-center border border-b-2 border-b-0 border-primary col-start-3 row-start-2" style="background-image: url(/assets/pointpleasant.png);"></div>
+            <div class="cols-start-4 row-start-1"></div>
+            <div class="bg-primary border border-2 border-primary row-start-2 col-start-4 text-white font-['quasimoda'] font-[700] text-lg flex justify-center items-center"><h1 class="text-center">Get Updates From Our Newsletter</h1></div>
+        </div>
+    </div>
+</body>
+</html>
